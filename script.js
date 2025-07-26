@@ -48,11 +48,17 @@ function displayCurrentWeather(data) {
     const temp     = data.main.temp;
     const desc     = data.weather[0].description;
     const iconCode = data.weather[0].icon;
+    const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
     document.getElementById('city-container').textContent = data.name;
     document.getElementById('temperature-container').textContent = `${Math.round(data.main.temp)}°C`;
     document.getElementById('description-container').textContent = data.weather[0].description;
-    const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-    document.getElementById('weather-container').src = iconUrl;
+    
+    const descriptionContainer = document.getElementById('weather-container');
+    descriptionContainer.innerHTML = '';
+    const iconImg = document.createElement('img');
+    iconImg.src = iconUrl;
+    iconImg.alt = data.weather[0].description;
+    document.getElementById('weather-container').appendChild(iconImg);
 }
 
 

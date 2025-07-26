@@ -13,7 +13,7 @@
 
 body {
     font-family: var(--font-sans);
-    background: var(--color-bg);
+    background-color: #727fd2;
 }
 
 h1 {
@@ -21,7 +21,7 @@ h1 {
   justify-content: center;
   margin: 1rem;
   padding: 0.5rem 1rem;
-  color: rgb(36, 41, 43);
+  color: rgb(228, 237, 241);
 }
 
 .form {
@@ -33,7 +33,7 @@ h1 {
   margin: 1rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   border-radius: 0.25rem;
-  background: #efeff1;
+  background: #e6e6fa;
 }
 
 #search-form input[type="text"] {
@@ -69,10 +69,12 @@ h1 {
   min-height: 100vh;
   align-items: top;
   box-sizing: border-box;
+  background-color: #cbd1fb;
+  border: 1px solid rgb(221, 244, 255);
+  border-radius: 0.5rem;
 }
 
 #city-container {
-  display: block;
   width: 100%;
   font-size: large;
   box-sizing: border-box;
@@ -80,4 +82,8 @@ h1 {
 
 #description-container {
   text-transform: capitalize;
+}
+
+.hidden {
+  display: none;
 }
